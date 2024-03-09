@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(int argc, char const *argv[])
+{
+    FILE *fp;
+    fp= fopen("Arya.csv","");
+    if(fp==NULL)
+    {
+        printf("File does not Created");
+        exit(0);}
+        else{
+           printf("File Created Succesfully...\n");
+             }
+    char data[1000];
+    fprintf(fp,"--Student Details--\n");
+
+    printf("Enter ID No.-\n");
+    fprintf(fp,"ID No.-");
+    fgets(data, 500, stdin);
+    fputs(data, fp);
+
+    printf("Enter Name-\n");   
+    fprintf(fp,"Name-");
+    fgets(data, 500, stdin);
+    fputs(data, fp);
+    
+    printf("Enter Branch-\n");
+    fprintf(fp,"Branch-");
+    fgets(data, 500, stdin);
+    fputs(data, fp);
+    
+    printf("Enter Section-\n");
+    fprintf(fp,"Section-");
+    fgets(data, 500, stdin);
+    fputs(data, fp);
+    
+    printf("Enter Roll Number-\n");
+    fprintf(fp,"Roll Number-");
+    fgets(data, 500, stdin);
+    fputs(data, fp);
+    
+    printf("Enter Contact Details-\n");
+    fprintf(fp,"Contact Details-");
+    fgets(data, 500, stdin);
+    fputs(data, fp);
+    fclose(fp);   
+}
