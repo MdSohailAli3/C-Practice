@@ -1,0 +1,17 @@
+//pointer subtraction
+#include<stdio.h>
+int main(int argc, char const *argv[])
+{
+  int a=5, b=6;
+  int *p,*q;
+  p=&a;
+  q=&b;
+  printf("\np=%d",p);
+  printf("\nq=%d",q);
+  p=p-q;//here the p is 1004 and q=1000 so ans is 1;
+  printf("\np=%d",p);
+  printf("\n*p=%d",*p);
+  printf("\n*q=%d",*q);
+
+  return 0;
+}
