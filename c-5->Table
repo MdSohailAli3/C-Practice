@@ -1,0 +1,17 @@
+//table without using loops
+#include<stdio.h>
+int main(int argc, char const *argv[])
+{
+    int i=1,n,t;
+    printf("Enter a no. to print its table\n");
+    scanf("%d",&n);
+    table:
+        t=n*i;
+        
+        printf("%d*%d=%d",n,i,t);
+        i++;
+        printf("\n");
+        if(i<=10){
+        goto table;}
+    return 0;
+}
