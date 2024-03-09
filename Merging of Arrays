@@ -1,0 +1,65 @@
+//merging and sorting of array in ascending order
+#include <stdio.h>
+int main(int argc, char const *argv[])
+{
+    /* merging two arrays */
+
+    int n1, n2;
+    int a[20], b[20], c[40], i;
+
+    printf("Enter the size of array 'A':");
+    scanf("%d", &n1);
+    printf("Enter the elements of A-\n");
+    for (i = 0; i < n1; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    printf("Enter the size of array 'B':");
+    scanf("%d", &n2);
+    printf("Enter the elements of B-\n");
+    for (i = 0; i < n2; i++)
+    {
+        scanf("%d", &b[i]);
+    }
+
+    for (i = 0; i < n1; i++)
+    {
+        c[i] = a[i];
+    }
+
+    int n3 = n1 + n2;
+
+    for (i = n1; i < n3; i++)
+    {
+        c[i] = b[i - n1];
+    }
+
+    printf("Merged Array:\n");
+    for (i = 0; i < n3; i++)
+    {
+        printf("%d\t", c[i]);
+    }
+    // before this line , code working perfectly:)
+    //now we do sorting in ascending order...
+    int j, x;
+    for (i = 0; i < n3; i++)
+    {
+        for (j = i + 1; j < n3; j++)
+        {
+            if (c[i] > c[j])
+            {
+                x = c[i];
+                c[i] = c[j];
+                c[j] = x;
+            }
+        }
+    }
+    printf("\nYour New Sorted Array:\n");
+    for (i = 0; i < n3; i++)
+    {
+        printf("%d\t", c[i]);
+    }
+
+    return 0;
+}
